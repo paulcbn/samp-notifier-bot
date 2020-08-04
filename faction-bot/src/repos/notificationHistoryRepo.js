@@ -5,6 +5,7 @@ const addNotification = (id, timestamp, recordedState) => {
 };
 
 const getLastNotificationForChannel = (id) => {
+  if (container[id] === undefined) return {};
   return container[id];
 };
 

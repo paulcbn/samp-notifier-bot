@@ -1,6 +1,7 @@
 import CONFIG from '../config/config.json';
 import Discord from 'discord.js';
 import addWatchCommand from './commands/addWatch.js';
+import removeWatchCommand from './commands/removeWatch.js';
 import debugCommand from './commands/debug.js';
 import { startPolling } from './polling.js';
 
@@ -18,6 +19,7 @@ client.on('ready', () => {
 
 const COMMANDS = {
   'watch': addWatchCommand,
+  'unwatch': removeWatchCommand,
   'debug': debugCommand,
 };
 

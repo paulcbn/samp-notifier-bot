@@ -1,4 +1,7 @@
 {
-	"prefix": "!",
-	"token": "your-token-goes-here"
+  "prefix": "!",
+  "token": "your-token-goes-here",
+  "pollInterval": 120,
+  "unchangedInterval": 86400,
+  "hostname": "http://localhost:5000"
 }
