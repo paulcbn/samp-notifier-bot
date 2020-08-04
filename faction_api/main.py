@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 def factions_page():
     factions = get_factions(FACTIONS_URL_RPG2)
-    return "\n\n".join([faction.to_json() for faction in factions])
+    return "[ "+",".join([faction.to_json() for faction in factions])+" ]"
 
 
 if __name__ == "__main__":
