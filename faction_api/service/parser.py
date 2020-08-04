@@ -19,7 +19,7 @@ def get_level(string):
 
 
 def is_open(string):
-    if string == "lock_open":
+    if "lock_open" in string:
         return True
     return False
 
