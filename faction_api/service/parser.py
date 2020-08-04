@@ -1,3 +1,4 @@
+import requests
 from bs4 import BeautifulSoup
 import re
 
@@ -33,8 +34,8 @@ def get_applications(string):
 
 def get_factions(factions_url):
     factions = []
-    f = open("mock.html")
-    soup = BeautifulSoup(f.read(), 'html.parser')
+    content = requests.get(factions_url).content
+    soup = BeautifulSoup(content, 'html.parser')
     faction_tables = soup.findAll("div", {"class": "tableFull"})
     for faction_table in faction_tables:
         tab = faction_table.find("table")
